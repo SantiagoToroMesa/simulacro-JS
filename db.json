@@ -1,0 +1,54 @@
+{
+  "users": [
+    {
+      "id": "1",
+      "name": "Admin",
+      "email": "admin@admin.com",
+      "password": "admin123",
+      "role": "admin",
+      "phone": "1234567890",
+      "enrollNumber": "98765432100000",
+      "dateOfAdmission": "01-Jan-2020"
+    },
+    {
+      "id": "1752379728658",
+      "name": "santiago",
+      "email": "brokeboisant@gmail.com",
+      "password": "12qw",
+      "role": "user",
+      "phone": "304939288182",
+      "enrrollNumber": "1752379728653954",
+      "dateOfAdmission": "Jul 12, 2025"
+    }
+  ],
+  "courses": [
+    {
+      "id": "1",
+      "title": "Introducción a JavaScript",
+      "description": "Curso básico de JavaScript",
+      "startDate": "10-Jul-2025",
+      "duration": "4 semanas"
+    },
+    {
+        "id": "2",
+        "title": "Desarrollo Web Avanzado",
+        "description": "Curso avanzado de desarrollo web con JavaScript",
+        "startDate": "15-Jul-2025",
+        "duration": "6 semanas"
+    },
+    {
+        "id": "3",
+        "title": "Node.js para Principiantes",
+        "description": "Curso introductorio a Node.js y desarrollo backend",
+        "startDate": "20-Jul-2025",
+        "duration": "5 semanas"
+    }
+  ],
+  "enrollments": [
+    {
+      "id": "e0c0",
+      "userId": "1752379728658",
+      "courseId": "1"
+    }
+  ]
+}
