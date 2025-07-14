@@ -25,50 +25,54 @@ document.body.addEventListener("click", (e) => {
 
 // Mostrar cursos en public según el usuario
 async function renderPublicCourses() {
+    // 1. Selecciona el contenedor donde se mostrarán los cursos.
     const container = document.getElementById("public-courses-container");
-    if (!container) return;
-    container.innerHTML = "Cargando cursos...";
+    if (!container) return; // Si no existe, termina.
+    container.innerHTML = "Cargando cursos..."; // Muestra mensaje de carga.
+    // 2. Obtiene el usuario actual desde localStorage.
     const user = JSON.parse(localStorage.getItem("user"));
     if (!user) {
-        container.innerHTML = "Debes iniciar sesión para ver los cursos.";
+        container.innerHTML = "Debes iniciar sesión para ver los cursos."; // Si no hay usuario, pide login.
         return;
     }
+    // 3. Obtiene todos los cursos, inscripciones y usuarios en paralelo.
     const [courses, enrollments, users] = await Promise.all([
         get("http://localhost:3000/courses"),
         get("http://localhost:3000/enrollments"),
         get("http://localhost:3000/users")
     ]);
     let html = "";
-    if (user.role === "user") {
-        // Cursos en los que está matriculado
+    if (user.role === "user") { // 4. Si es usuario normal...
+        // Filtra las inscripciones del usuario actual.
         const myEnrollments = enrollments.filter(e => e.userId === user.id);
+        // Filtra los cursos en los que está inscrito el usuario.
         const myCourses = courses.filter(c => myEnrollments.some(e => e.courseId === c.id));
         if (myCourses.length === 0) {
-            html = "<p>No estás matriculado en ningún curso.</p>";
+            html = "<p>No estás matriculado en ningún curso.</p>"; // Si no hay cursos, mensaje.
         } else {
             html = "<h3>Mis cursos matriculados:</h3><ul>";
             myCourses.forEach(c => {
-                html += `<li><strong>${c.title}</strong> - ${c.description}</li>`;
+                html += `<li><strong>${c.title}</strong> - ${c.description}</li>`; // Imprime cada curso.
             });
             html += "</ul>";
         }
-    } else if (user.role === "admin") {
-        // Todos los cursos y usuarios matriculados
+    } else if (user.role === "admin") { // 5. Si es admin...
         html = "<h3>Todos los cursos y usuarios matriculados:</h3>";
         courses.forEach(c => {
             html += `<div style='margin-bottom:1em'><strong>${c.title}</strong> - ${c.description}<br><em>Usuarios matriculados:</em><ul>`;
+            // Filtra inscripciones de ese curso y busca los usuarios inscritos.
             const enrolledUsers = enrollments.filter(e => e.courseId === c.id).map(e => users.find(u => u.id === e.userId));
             if (enrolledUsers.length === 0) {
-                html += "<li>Nadie matriculado</li>";
+                html += "<li>Nadie matriculado</li>"; // Si no hay inscritos, mensaje.
             } else {
                 enrolledUsers.forEach(u => {
-                    html += `<li>${u ? u.name : 'Usuario desconocido'} (${u ? u.email : ''})</li>`;
+                    html += `<li>${u ? u.name : 'Usuario desconocido'} (${u ? u.email : ''})</li>`; // Imprime nombre y correo de cada inscrito.
                 });
             }
             html += "</ul></div>";
         });
     }
-    container.innerHTML = html;
+    container.innerHTML = html; // 6. Inserta el HTML generado en el contenedor.
 }
 
 export async function navigate(pathname) {
