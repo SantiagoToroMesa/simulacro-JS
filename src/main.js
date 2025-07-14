@@ -81,6 +81,21 @@ export async function navigate(pathname) {
     const sidebar = document.getElementById("sidebar");
     const content = document.getElementById("content");
 
+    // --- Protección de rutas: Solo usuarios autenticados pueden acceder a rutas privadas ---
+    const privateRoutes = ["/dashboard", "/courses", "/index"];
+    if (privateRoutes.includes(pathname)) {
+        if (!user) {
+            // Si no hay usuario logueado, redirige al login
+            navigate("/");
+            return;
+        }
+    }
+    // --- Protección de rutas: Solo admin puede acceder a dashboard ---
+    if (pathname === "/dashboard" && user && user.role !== "admin") {
+        // Si el usuario no es admin, redirige a la vista pública de cursos
+        navigate("/courses");
+        return;
+    }
     // Redirección automática después de login
     if (pathname === "/" && user) {
         if (user.role === "admin") {
@@ -132,13 +147,6 @@ export async function navigate(pathname) {
             if (pathname === "/register") {
                 setupRegister();
             }
-        }
-    }
-    // Protección de rutas
-    if (pathname === "/dashboard" || pathname === "/courses" || pathname === "/index") {
-        if (!user) {
-            navigate("/");
-            return;
         }
     }
 }
