@@ -93,8 +93,9 @@ header {
 .sidebar-nav a:hover {
     background: #34495e;
     color: #d95f98;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.09);
 }
+
 
 #content {
     margin-top: 60px;
