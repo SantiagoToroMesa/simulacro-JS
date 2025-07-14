@@ -13,6 +13,7 @@ const routes = {
     "/register": "src/pages/register.html",
     "/public": "src/pages/public.html",
     "/courses": "src/pages/courses.html",
+    "/admin-reservas": "src/pages/admin-reservas.html",
     // Agrega más rutas aquí si creas más páginas
 };
 
@@ -232,6 +233,38 @@ window.cancelarReserva = async function(resId) {
     }
 }
 
+async function renderAdminReservations() {
+    const container = document.getElementById("admin-reservations-list");
+    if (!container) return;
+    const [reservations, hotels, users] = await Promise.all([
+        get("http://localhost:3000/reservations"),
+        get("http://localhost:3000/hotels"),
+        get("http://localhost:3000/users")
+    ]);
+    if (reservations.length === 0) {
+        container.innerHTML = "<p>No hay reservas en el sistema.</p>";
+        return;
+    }
+    let html = `<table class='user-res-table'><thead><tr><th>ID</th><th>Usuario</th><th>Hotel</th><th>Check-in</th><th>Check-out</th><th>Habitaciones</th><th>Total</th><th>Estado</th><th>Fecha Reserva</th></tr></thead><tbody>`;
+    reservations.forEach(r => {
+        const hotel = hotels.find(h => h.id === r.hotelId);
+        const user = users.find(u => u.id === r.userId);
+        html += `<tr>
+            <td>${r.id}</td>
+            <td>${user ? user.name : 'Desconocido'}</td>
+            <td>${hotel ? hotel.name : 'Hotel eliminado'}</td>
+            <td>${r.checkIn}</td>
+            <td>${r.checkOut}</td>
+            <td>${r.rooms}</td>
+            <td>$${r.total}</td>
+            <td>${r.status}</td>
+            <td>${r.reservationDate}</td>
+        </tr>`;
+    });
+    html += '</tbody></table>';
+    container.innerHTML = html;
+}
+
 export async function navigate(pathname) {
     history.pushState({}, "", pathname);
     const route = routes[pathname];
@@ -307,6 +340,9 @@ export async function navigate(pathname) {
             }
             if (pathname === "/register") {
                 setupRegister();
+            }
+            if (pathname === "/admin-reservas" && user && user.role === "admin") {
+                renderAdminReservations();
             }
         }
     }

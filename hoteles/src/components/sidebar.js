@@ -10,7 +10,7 @@ export function renderSidebar() {
             <nav class="sidebar-nav">
                 <a href="/dashboard" data-link>Dashboard</a>
                 <a href="/courses" data-link>Hoteles</a>
-                <a href="/public" data-link>Reservas</a>
+                <a href="/admin-reservas" data-link>Reservas</a>
             </nav>
         `;
     } else if (user) {
