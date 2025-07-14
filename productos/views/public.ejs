@@ -1,0 +1,10 @@
+<!-- ...existing code... -->
+<% if (user && user.rol === 'user') { %>
+  <h2>Cursos Matriculados</h2>
+  <ul>
+    <% user.cursosMatriculados.forEach(function(curso) { %>
+      <li><%= curso.nombre %></li>
+    <% }) %>
+  </ul>
+<% } %>
+<!-- ...existing code... -->

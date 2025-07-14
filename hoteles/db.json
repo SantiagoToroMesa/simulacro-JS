@@ -1,0 +1,59 @@
+{
+  "users": [
+    {
+      "id": "1",
+      "name": "Admin",
+      "email": "admin@admin.com",
+      "password": "admin123",
+      "role": "admin",
+      "phone": "1234567890"
+    },
+    {
+      "id": "2",
+      "name": "santiago",
+      "email": "brokeboisant@gmail.com",
+      "password": "12qw",
+      "role": "user",
+      "phone": "304939288182"
+    }
+  ],
+  "hotels": [
+    {
+      "id": "1",
+      "name": "Hotel Central",
+      "city": "Bogotá",
+      "stars": 4,
+      "description": "Hotel céntrico con desayuno incluido y wifi gratis.",
+      "services": ["wifi", "desayuno", "gimnasio"],
+      "photos": ["hotel1a.jpg", "hotel1b.jpg"],
+      "roomsTotal": 30,
+      "roomsAvailable": 20,
+      "pricePerNight": 80
+    },
+    {
+      "id": "2",
+      "name": "Playa Suites",
+      "city": "Cartagena",
+      "stars": 5,
+      "description": "Frente al mar, piscina y spa.",
+      "services": ["piscina", "spa", "playa privada"],
+      "photos": ["hotel2a.jpg", "hotel2b.jpg"],
+      "roomsTotal": 50,
+      "roomsAvailable": 45,
+      "pricePerNight": 150
+    }
+  ],
+  "reservations": [
+    {
+      "id": "r1",
+      "userId": "2",
+      "hotelId": "1",
+      "checkIn": "2025-08-01",
+      "checkOut": "2025-08-05",
+      "rooms": 1,
+      "total": 320,
+      "status": "confirmada",
+      "reservationDate": "2025-07-10 10:00"
+    }
+  ]
+}

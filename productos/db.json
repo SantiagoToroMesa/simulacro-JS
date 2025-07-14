@@ -1,0 +1,72 @@
+{
+  "users": [
+    {
+      "id": "1",
+      "name": "Admin",
+      "email": "admin@admin.com",
+      "password": "admin123",
+      "role": "admin",
+      "phone": "1234567890"
+    },
+    {
+      "id": "1752379728658",
+      "name": "santiago",
+      "email": "brokeboisant@gmail.com",
+      "password": "12qw",
+      "role": "user",
+      "phone": "304939288182"
+    }
+  ],
+  "products": [
+    {
+      "id": "1",
+      "name": "Laptop Lenovo",
+      "description": "Laptop de 15'' con 16GB RAM y 512GB SSD",
+      "price": 1200,
+      "stock": 5
+    },
+    {
+      "id": "2",
+      "name": "Mousee Inalámbrico",
+      "description": "Mouse ergonómico con batería recargable",
+      "price": "25",
+      "stock": "50"
+    },
+    {
+      "id": "3",
+      "name": "Teclado Mecánico",
+      "description": "Teclado mecánico RGB con retroiluminación",
+      "price": 80,
+      "stock": 30
+    }
+  ],
+  "purchases": [
+    {
+      "id": "p0c0",
+      "userId": "1752379728658",
+      "productId": "1",
+      "quantity": 1
+    },
+    {
+      "id": "340d",
+      "userId": "1752379728658",
+      "productId": "1",
+      "quantity": 5,
+      "date": "13/7/2025, 10:35:03 p. m."
+    },
+    {
+      "id": "db53",
+      "userId": "1752379728658",
+      "productId": "2",
+      "quantity": 40,
+      "date": "13/7/2025, 10:35:42 p. m."
+    },
+    {
+      "id": "b7f4",
+      "userId": "1752379728658",
+      "productId": "1",
+      "quantity": 5,
+      "date": "13/7/2025, 10:37:05 p. m."
+    }
+  ]
+}
