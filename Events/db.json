@@ -1,0 +1,109 @@
+{
+  "users": [
+    {
+      "id": "1",
+      "name": "Admin",
+      "email": "admin@admin.com",
+      "password": "admin123",
+      "role": "admin",
+      "phone": "1234567890",
+      "enrollNumber": "21837472381",
+      "dateOfAdmission": "Jul 14, 2025"
+    },
+    {
+      "id": "2",
+      "name": "santiago",
+      "email": "brokeboisant@gmail.com",
+      "password": "12qw",
+      "role": "user",
+      "phone": "304939288182",
+      "enrollNumber": "48271924321",
+      "dateOfAdmission": "Jul 14, 2025"
+    },
+    {
+      "id": "1752512305129",
+      "name": "pedronel",
+      "email": "pedronel@gmail.com",
+      "password": "pedro123",
+      "role": "user",
+      "phone": "321456423",
+      "enrrollNumber": "1752512305122787",
+      "dateOfAdmission": "Jul 14, 2025"
+    }
+  ],
+  "events": [
+    {
+      "id": "1",
+      "name": "event Central",
+      "city": "Bogotá",
+      "description": "event céntrico con desayuno incluido y wifi gratis.",
+      "services": [
+        "wifi",
+        "desayuno",
+        "gimnasio"
+      ],
+      "photos": [
+        "https://digital.ihg.com/is/image/ihg/voco-glasgow-6723092264-4x3"
+      ],
+      "quotsTotal": 30,
+      "quotsAvailable": 0,
+      "date": "2028-01-03"
+    },
+    {
+      "id": "5b85",
+      "name": "dia en la playa",
+      "city": "Cartagena",
+      "services": [
+        "noche blanca",
+        "lancha"
+      ],
+      "quotsTotal": 40,
+      "quotsAvailable": 35,
+      "photos": [
+        "https://imgs.search.brave.com/jk-Pm_6dccH6w9FG6v_kgeTXlNbC2joQWd_DHYXjr24/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9zdGF0/aWM2LmRlcG9zaXRw/aG90b3MuY29tLzEw/MTc4MTcvNTY2L2kv/NjAwL2RlcG9zaXRw/aG90b3NfNTY2MDE5/MS1zdG9jay1waG90/by1mdW4tZGF5LWF0/LXRoZS1iZWFjaC5q/cGc"
+      ],
+      "description": "disfrutar un dia soleado en la playa con tu familia",
+      "date": "2026-10-14"
+    },
+    {
+      "id": "6d40",
+      "name": "Concierto ",
+      "city": "medellin",
+      "services": [
+        "musica rap",
+        "musica rock",
+        "musica popular"
+      ],
+      "quotsTotal": 1000,
+      "quotsAvailable": 1000,
+      "photos": [
+        "https://imgs.search.brave.com/ECJ-1PpPMSXIgKhHTP-pKbac7leCQYZx1ormDOKptQA/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9jZG53/b3JkcHJlc3N0ZXN0/LWYwZWtkZ2V2Y25n/ZWd1ZGIuejAxLmF6/dXJlZmQubmV0L2Vz/L3dwLWNvbnRlbnQv/dXBsb2Fkcy8yMDIz/LzAyL0V2ZW50b3Mt/TWVkZWxsaW4tMS0x/LmpwZw"
+      ],
+      "description": "concierto de musica variada en el bicentenario de medellin",
+      "date": "2025-11-26"
+    }
+  ],
+  "reservations": [
+    {
+      "id": "12fe",
+      "userId": "2",
+      "eventId": "1",
+      "quots": 5,
+      "reservationDate": "14/7/2025, 11:53:06"
+    },
+    {
+      "id": "de3a",
+      "userId": "1752512305129",
+      "eventId": "1",
+      "quots": 5,
+      "reservationDate": "14/7/2025, 11:58:44"
+    },
+    {
+      "id": "3be3",
+      "userId": "2",
+      "eventId": "5b85",
+      "quots": 5,
+      "reservationDate": "14/7/2025, 12:02:23"
+    }
+  ]
+}

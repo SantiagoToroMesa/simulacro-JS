@@ -12,7 +12,7 @@ const routes = {
     "/dashboard": "src/pages/dashboard.html",
     "/register": "src/pages/register.html",
     "/public": "src/pages/public.html",
-    "/courses": "src/pages/courses.html",
+    "/courses": "src/pages/events.html",
     // Agrega más rutas aquí si creas más páginas
 };
 

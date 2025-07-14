@@ -1,6 +1,12 @@
-[Versión en Español](./README_paso_a_paso.md)
+# performance test
 
-# Course and Registration System SPA
+### Developed by:
+- name: Santiago Toro
+- clan: lovelace
+- Email: storomes@gmail.com
+- cc: 1025761018
+
+## Course and Registration System SPA
 
 A Single Page Application (SPA) for user and course management, featuring role-based access (admin/user), dynamic navigation, and CRUD operations. Built with HTML, CSS, Vanilla JavaScript, and json-server for mock backend.
 
@@ -15,41 +21,9 @@ pie
     "Styles and UI" : 10
     "Integration and Testing" : 15
     "Documentation and Deployment" : 10
+
+
 ```
-
-## How to Create a SPA from Scratch with Vite (Step by Step)
-
-1. **Install Vite globally (optional):**
-   ```bash
-   npm install -g vite
-   ```
-2. **Create a new project folder and initialize npm:**
-   ```bash
-   mkdir my-spa-project
-   cd my-spa-project
-   npm init -y
-   ```
-3. **Install Vite as a dev dependency:**
-   ```bash
-   npm install vite --save-dev
-   ```
-4. **Add a dev script to your `package.json`:**
-   ```json
-   "scripts": {
-     "dev": "vite"
-   }
-   ```
-5. **Create your project structure:**
-   - `index.html` (entry point)
-   - `src/` (source code: JS, CSS, components, etc.)
-6. **Start the development server:**
-   ```bash
-   npm run dev
-   ```
-7. **Open the local server URL (usually http://localhost:5173) in your browser.**
-
----
-
 ## Features
 - User authentication (login/register)
 - Role-based access: admin and user
@@ -61,7 +35,7 @@ pie
 
 ## Project Structure
 ```
-Simulacro_js/
+Events/
 ├── db.json                # Mock database for json-server
 ├── index.html             # Main HTML entry point
 ├── package.json           # Project dependencies
@@ -84,21 +58,24 @@ Simulacro_js/
    ```bash
    npm install
    ```
-3. Start the mock backend:
+3. Start the development server:
    ```bash
-   npx json-server --watch db.json --port 3000
+   npm run dev
    ```
-4. Open `index.html` in your browser or use a local server (e.g. Live Server extension).
+4. Start the API server:
+   ```bash
+    json-server db.json
+    ```
 
 ## Usage
 - **Login/Register:** Access via `/` or `/register`.
-- **Dashboard:** Admin-only, manage users and courses.
-- **Courses/Public:** Users can view and enroll in courses.
+- **Dashboard:** Admin-only, manage events and can view all the reservations.
+- **Events/Public:** Users can view and enroll in Events.
 - **Sidebar/Header:** Dynamic based on user role and authentication.
 
 ## Roles & Route Protection
 - **Admin:** Full access to dashboard, user/course CRUD, view all enrollments.
-- **User:** Can view/enroll in courses, see own enrollments.
+- **User:** Can view/enroll in Event, see own enrollments.
 - **Route protection** is enforced in `src/main.js`.
 
 ## Dependencies
@@ -107,8 +84,8 @@ Simulacro_js/
 - [Vite](https://vitejs.dev/) (for development server)
 
 ## Example Users
-- Admin: `admin@admin.com` / `yourpassword`
-- User: Register a new account
-
-## License
-MIT 
+- Admin: `admin@admin.com` / `admin123`
+   ![img.png](src/Assets/images/img.png)
+   ![img_1.png](src/Assets/images/img_1.png)
+- User:
+   ![img.png](src/Assets/images/img3.png)

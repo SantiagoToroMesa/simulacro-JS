@@ -8,16 +8,16 @@ export function renderSidebar() {
     if (user && user.role === "admin") {
         sidebar.innerHTML = `
             <nav class="sidebar-nav">
-                <a href="/dashboard" data-link>Dashboard</a>
-                <a href="/courses" data-link>Hoteles</a>
-                <a href="/admin-reservas" data-link>Reservas</a>
+                <a href="/dashboard" data-link>add events</a>
+                <a href="/events" data-link>logged events</a>
+                <a href="/admin-reservas" data-link>reservations</a>
             </nav>
         `;
     } else if (user) {
         sidebar.innerHTML = `
             <nav class="sidebar-nav">
-                <a href="/courses" data-link>Hoteles</a>
-                <a href="/public" data-link>Reservas</a>
+                <a href="/events" data-link>Events</a>
+                <a href="/public" data-link>My reservations</a>
             </nav>
         `;
     } else {

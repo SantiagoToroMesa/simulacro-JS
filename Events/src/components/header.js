@@ -10,7 +10,7 @@ export function renderHeader() {
     }
     header.innerHTML = `
         <div class="logo">
-        <h1>course and registration system</h1>
+        <h1>event booking system</h1>
         </div>
         <nav>
             <span>¡Hello, ${session.name}!</span>

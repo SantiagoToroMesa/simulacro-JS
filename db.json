@@ -19,6 +19,16 @@
       "phone": "304939288182",
       "enrrollNumber": "1752379728653954",
       "dateOfAdmission": "Jul 12, 2025"
+    },
+    {
+      "id": "1752491866611",
+      "name": "r7",
+      "email": "storom@escolme.edu.co",
+      "password": "123",
+      "role": "user",
+      "phone": "234235344",
+      "enrrollNumber": "1752491866603115",
+      "dateOfAdmission": "Jul 14, 2025"
     }
   ],
   "courses": [
@@ -30,18 +40,18 @@
       "duration": "4 semanas"
     },
     {
-        "id": "2",
-        "title": "Desarrollo Web Avanzado",
-        "description": "Curso avanzado de desarrollo web con JavaScript",
-        "startDate": "15-Jul-2025",
-        "duration": "6 semanas"
+      "id": "2",
+      "title": "Desarrollo Web Avanzado",
+      "description": "Curso avanzado de desarrollo web con JavaScript",
+      "startDate": "15-Jul-2025",
+      "duration": "6 semanas"
     },
     {
-        "id": "3",
-        "title": "Node.js para Principiantes",
-        "description": "Curso introductorio a Node.js y desarrollo backend",
-        "startDate": "20-Jul-2025",
-        "duration": "5 semanas"
+      "id": "3",
+      "title": "Node.js para Principiantes",
+      "description": "Curso introductorio a Node.js y desarrollo backend",
+      "startDate": "20-Jul-2025",
+      "duration": "5 semanas"
     }
   ],
   "enrollments": [
@@ -49,6 +59,21 @@
       "id": "e0c0",
       "userId": "1752379728658",
       "courseId": "1"
+    },
+    {
+      "id": "af9e",
+      "userId": "1752379728658",
+      "courseId": "2"
+    },
+    {
+      "id": "5343",
+      "userId": "1752379728658",
+      "courseId": "3"
+    },
+    {
+      "id": "9ea2",
+      "userId": "1752491866611",
+      "courseId": "3"
     }
   ]
 }
