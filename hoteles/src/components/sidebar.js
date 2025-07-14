@@ -9,15 +9,15 @@ export function renderSidebar() {
         sidebar.innerHTML = `
             <nav class="sidebar-nav">
                 <a href="/dashboard" data-link>Dashboard</a>
-                <a href="/courses" data-link>Cursos</a>
-                <a href="/public" data-link>Matriculados</a>
+                <a href="/courses" data-link>Hoteles</a>
+                <a href="/public" data-link>Reservas</a>
             </nav>
         `;
     } else if (user) {
         sidebar.innerHTML = `
             <nav class="sidebar-nav">
-                <a href="/courses" data-link>Cursos</a>
-                <a href="/public" data-link>Mi Panel</a>
+                <a href="/courses" data-link>Hoteles</a>
+                <a href="/public" data-link>Reservas</a>
             </nav>
         `;
     } else {

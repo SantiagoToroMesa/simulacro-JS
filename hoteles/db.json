@@ -24,11 +24,17 @@
       "city": "Bogotá",
       "stars": 4,
       "description": "Hotel céntrico con desayuno incluido y wifi gratis.",
-      "services": ["wifi", "desayuno", "gimnasio"],
-      "photos": ["hotel1a.jpg", "hotel1b.jpg"],
+      "services": [
+        "wifi",
+        "desayuno",
+        "gimnasio"
+      ],
+      "photos": [
+        "https://digital.ihg.com/is/image/ihg/voco-glasgow-6723092264-4x3"
+      ],
       "roomsTotal": 30,
       "roomsAvailable": 20,
-      "pricePerNight": 80
+      "pricePerNight": 800
     },
     {
       "id": "2",
@@ -36,11 +42,34 @@
       "city": "Cartagena",
       "stars": 5,
       "description": "Frente al mar, piscina y spa.",
-      "services": ["piscina", "spa", "playa privada"],
-      "photos": ["hotel2a.jpg", "hotel2b.jpg"],
+      "services": [
+        "piscina",
+        "spa",
+        "playa privada"
+      ],
+      "photos": [
+        "https://tse3.mm.bing.net/th/id/OIP.dNH5Vp-PUIud3G7rzxPqhwHaFK?pid=Api&P=0&h=180"
+      ],
       "roomsTotal": 50,
-      "roomsAvailable": 45,
+      "roomsAvailable": 38,
       "pricePerNight": 150
+    },
+    {
+      "id": "f92d",
+      "name": "la pinada",
+      "city": "medellin",
+      "stars": 5,
+      "services": [
+        "limpiieza",
+        "piscina"
+      ],
+      "roomsTotal": 30,
+      "roomsAvailable": 30,
+      "pricePerNight": 5000000,
+      "photos": [
+        "http://www.cfmedia.vfmleonardo.com/imageRepo/6/0/100/3/616/bkksi-exterior-0385-hor-clsc_O.jpg"
+      ],
+      "description": "uwuwerjfsjdjfw"
     }
   ],
   "reservations": [
@@ -54,6 +83,28 @@
       "total": 320,
       "status": "confirmada",
       "reservationDate": "2025-07-10 10:00"
+    },
+    {
+      "id": "1587",
+      "userId": "1",
+      "hotelId": "2",
+      "checkIn": "2004-09-09",
+      "checkOut": "2005-01-01",
+      "rooms": 4,
+      "total": 68400,
+      "status": "confirmada",
+      "reservationDate": "13/7/2025, 11:11:21 p. m."
+    },
+    {
+      "id": "af43",
+      "userId": "2",
+      "hotelId": "2",
+      "checkIn": "2025-07-16",
+      "checkOut": "2025-07-23",
+      "rooms": 3,
+      "total": 3150,
+      "status": "confirmada",
+      "reservationDate": "13/7/2025, 11:25:23 p. m."
     }
   ]
 }
